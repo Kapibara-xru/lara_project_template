@@ -1,13 +1,37 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "axios": "^1.6.4",
-        "laravel-vite-plugin": "^1.0",
-        "vite": "^5.0"
-    }
+  "name": "vue-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs resources/js --fix --ignore-path .gitignore",
+    "format": "prettier --write resources/js/"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/runtime": "^7.21.5",
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "axios": "^1.6.4",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "laravel-vite-plugin": "^1.0",
+    "prettier": "^3.2.5",
+    "sass": "^1.69.5",
+    "vite": "^5.2.8",
+    "vite-plugin-babel": "^1.2.0",
+    "vite-plugin-commonjs": "^0.10.1",
+    "vite-plugin-vue-devtools": "^7.0.25"
+  }
 }
