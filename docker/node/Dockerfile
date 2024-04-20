@@ -7,7 +7,7 @@ EXPOSE 5173
 FROM node_base as node_deps
 
 RUN apt-get update && apt-get install -y yarn
-CMD ["sh", "-c", "yarn"]
+CMD yarn && yarn dev
 
 FROM node_deps as node_build
 
@@ -24,6 +24,6 @@ COPY package.json .
 #COPY --from=node_deps /var/www/node_modules ./node_modules
 COPY --from=node_build /var/www/public ./public
 
-FROM node_deps as node_dev
-
-CMD ["sh", "-c", "yarn dev"]
+#FROM node_deps as node_dev
+#
+#CMD yarn dev
