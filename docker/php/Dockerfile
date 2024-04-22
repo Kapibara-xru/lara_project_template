@@ -37,6 +37,6 @@ USER www
 
 WORKDIR /var/www
 
-CMD ["sh", "-c", "composer install"]
-
 EXPOSE 9000
+
+CMD composer install && php-fpm
