@@ -33,7 +33,7 @@ export default ({ mode }) => {
                     presets: ['@babel/preset-env'],
                     plugins: [['@babel/plugin-transform-runtime']],
                 },
-            }),
+            })
         ],
         optimizeDeps: {
             esbuildOptions: {
@@ -42,6 +42,16 @@ export default ({ mode }) => {
         },
         build: {
             target: 'es2021',
-        }
+        },
+        server: {
+            hmr: {
+                host: 'localhost',
+                clientPort: env.VITE_PORT,
+                protocol: 'ws'
+            },
+            watch: {
+                usePolling: true
+            }
+        },
     })
 }
