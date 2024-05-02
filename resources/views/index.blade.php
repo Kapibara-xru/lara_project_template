@@ -7,7 +7,7 @@
 
     <title>{{ getenv('APP_NAME') }}</title>
 
-    @vite(['resources/scss/style.scss', 'resources/js/main.js'])
+    @vite(['resources/scss/style.scss', 'resources/js/app.js'])
 </head>
 <body>
     <main id="app"></main>
